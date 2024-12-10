@@ -1,0 +1,1 @@
+("Sol ring", 1, False),("Questing Beast", 1, False),("Aspect of Hydra", 1, False)
