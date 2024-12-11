@@ -36,6 +36,12 @@ def save_data(name):
         print(f'O Name "{name}" foi salvo com sucesso.')
 
 
+def print_data():
+    file = 'Names.json'
+    for item in  read_Json(file):
+        print(item['Name'])
+    
+
 
 def main():
     while True:
@@ -53,7 +59,7 @@ def main():
             case 1:
                 add_card()
             case 2:
-                print(lista)
+                print_data()
             case 3:
                 print("sou feito para testes")
                 

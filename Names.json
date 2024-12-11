@@ -7,7 +7,7 @@
     {
         "Name": "Shock",
         "InDeck": false,
-        "Quantity": 3
+        "Quantity": 5
     },
     {
         "Name": "Alesha, Who Smiles at Death",
@@ -96,6 +96,16 @@
     },
     {
         "Name": "The Wandering Emperor",
+        "InDeck": false,
+        "Quantity": 1
+    },
+    {
+        "Name": "Killian, Ink Duelist",
+        "InDeck": false,
+        "Quantity": 1
+    },
+    {
+        "Name": "Angel of Light",
         "InDeck": false,
         "Quantity": 1
     }
