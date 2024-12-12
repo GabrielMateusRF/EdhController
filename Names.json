@@ -1,111 +1,21 @@
 [
     {
-        "Name": "Elesh Norn // The Argent Etchings",
-        "InDeck": false,
-        "Quantity": 2
-    },
-    {
-        "Name": "Shock",
-        "InDeck": false,
-        "Quantity": 5
-    },
-    {
-        "Name": "Alesha, Who Smiles at Death",
-        "InDeck": false,
-        "Quantity": 1
-    },
-    {
-        "Name": "+2 Mace",
-        "InDeck": false,
-        "Quantity": 1
-    },
-    {
-        "Name": "Amorphous Axe",
-        "InDeck": false,
-        "Quantity": 1
-    },
-    {
-        "Name": "Solemn Offering",
-        "InDeck": false,
-        "Quantity": 2
-    },
-    {
         "Name": "Sol Ring",
-        "InDeck": false,
-        "Quantity": 12
-    },
-    {
-        "Name": "Absolute Law",
-        "InDeck": false,
-        "Quantity": 1
-    },
-    {
-        "Name": "Daring Waverider",
         "InDeck": false,
         "Quantity": 3
     },
     {
-        "Name": "Arcane Signet",
+        "Name": "Liliana of the Veil",
         "InDeck": false,
-        "Quantity": 2
+        "Quantity": 0
     },
     {
-        "Name": "Selesnya Signet",
-        "InDeck": false,
-        "Quantity": 1
-    },
-    {
-        "Name": "Aladdin's Ring",
+        "Name": "Tolsimir, Friend to Wolves",
         "InDeck": false,
         "Quantity": 1
     },
     {
-        "Name": "Arcane Laboratory",
-        "InDeck": false,
-        "Quantity": 2
-    },
-    {
-        "Name": "Aether Shockwave",
-        "InDeck": false,
-        "Quantity": 2
-    },
-    {
-        "Name": "Boros Signet",
-        "InDeck": false,
-        "Quantity": 1
-    },
-    {
-        "Name": "Ensnaring Bridge",
-        "InDeck": false,
-        "Quantity": 1
-    },
-    {
-        "Name": "The One Ring",
-        "InDeck": false,
-        "Quantity": 1
-    },
-    {
-        "Name": "Sigarda's Aid",
-        "InDeck": false,
-        "Quantity": 1
-    },
-    {
-        "Name": "Ajani's Aid",
-        "InDeck": false,
-        "Quantity": 1
-    },
-    {
-        "Name": "The Wandering Emperor",
-        "InDeck": false,
-        "Quantity": 1
-    },
-    {
-        "Name": "Killian, Ink Duelist",
-        "InDeck": false,
-        "Quantity": 1
-    },
-    {
-        "Name": "Angel of Light",
+        "Name": "Eivor, Wolf-Kissed",
         "InDeck": false,
         "Quantity": 1
     }

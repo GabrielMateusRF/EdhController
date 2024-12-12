@@ -35,6 +35,27 @@ def save_data(name):
     else:
         print(f'O Name "{name}" foi salvo com sucesso.')
 
+def remove_data(name):
+    file = 'Names.json'
+    data_modificada = []
+    exists = False
+    for item in read_Json(file):
+        if item['Name'] == name:
+            exists = True
+            item['Quantity'] -= 1 
+            #if item['Quantity'] <= 0:
+                #data_modificada.pop(item)
+        data_modificada.append(item)
+
+    with open(file, 'w') as f:
+        json.dump(data_modificada, f, indent=4) 
+    if exists:
+        print(f'O Name "{name}" teve sua quantidade diminuida em 1.')
+    else:
+        print(f'O Name "{name}" Não foi encontrado')
+
+
+
 def card_search(data):
     if data['total_cards'] > 1:
         print(f"Foram encontradas {data['total_cards']} cartas que correspondem ao Name:")
@@ -64,8 +85,6 @@ def card_validate(cardname):
 
     if response.status_code == 200:
         data = response.json()
-
-
         print(f"o total de cartas encontradas: {data['total_cards']}")
         if data['total_cards'] > 0:
            return card_search(data)
@@ -99,6 +118,14 @@ def add_card():
         print(card)
         save_data(card)
 
+def remove_card():
+    card = valid_input()
+    if not card:
+        print("Carta não encontrad")
+    else:
+        print(card)
+        remove_data(card)
+        
 
 def valid_card():
     print("validate")
