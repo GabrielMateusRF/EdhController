@@ -2,7 +2,7 @@ import requests
 import json
 import os
 from Addcard import add_card, remove_card
-
+from DataManager import card_validate2
 
 def read_Json(file):
     if os.path.exists(file):
@@ -75,7 +75,9 @@ def main():
             case 3:
                 remove_card()
             case 4:
-                decklist_create()
+                name = input("Digite o nome da carta: ")
+                receive=card_validate2(name)
+                print(f'A carta: {receive}')
             case 0:
                 break
             case _:

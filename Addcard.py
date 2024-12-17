@@ -34,6 +34,7 @@ def save_data(name):
         print(f'O Name "{name}" já existia e a quantidade foi aumentada em 1.')
     else:
         print(f'O Name "{name}" foi salvo com sucesso.')
+    
 
 def remove_data(name):
     file = 'Names.json'
@@ -53,8 +54,7 @@ def remove_data(name):
         print(f'O Name "{name}" teve sua quantidade diminuida em 1.')
     else:
         print(f'O Name "{name}" Não foi encontrado')
-
-
+        
 
 def card_search(data):
     if data['total_cards'] > 1:
@@ -92,6 +92,8 @@ def card_validate(cardname):
             return False
     else:
         return False
+    
+
 
 def valid_input():
         while True:
