@@ -3,38 +3,7 @@ import json
 import os
 from Addcard import add_card, remove_card
 from DataManager import card_validate2
-
-def read_Json(file):
-    if os.path.exists(file):
-        with open(file, 'r') as f:
-            data = json.load(f)
-            for item in data:
-                yield item
-
-def save_data(name):
-    file = 'Names.json'
-    data_modificadas = []
-    exists = False
-    for item in read_Json(file):
-        if item['Name'] == name:
-            item['Quantity'] += 1 
-            exists = True
-        data_modificadas.append(item)
-    
-    if not exists:
-        novo_dado = {
-            "Name": name,
-            "InDeck": False,
-            "Quantity": 1
-        }
-        data_modificadas.append(novo_dado)
-    
-    with open(file, 'w') as f:
-        json.dump(data_modificadas, f, indent=4) 
-    if exists:
-        print(f'O Name "{name}" já existia e a quantidade foi aumentada em 1.')
-    else:
-        print(f'O Name "{name}" foi salvo com sucesso.')
+from JsonRead import read_Json
 
 
 def print_data():

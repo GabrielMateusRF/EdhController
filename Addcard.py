@@ -1,14 +1,9 @@
 import requests
 import json
 import os
+from JsonRead import read_Json
 
 
-def read_Json(file):
-    if os.path.exists(file):
-        with open(file, 'r') as f:
-            data = json.load(f)
-            for item in data:
-                yield item
 
 def save_data(name):
     file = 'Names.json'
