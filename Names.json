@@ -18,5 +18,15 @@
         "Name": "Eivor, Wolf-Kissed",
         "InDeck": false,
         "Quantity": 1
+    },
+    {
+        "Name": "Accursed Marauder",
+        "InDeck": false,
+        "Quantity": 1
+    },
+    {
+        "Name": "Ambition's Cost",
+        "InDeck": false,
+        "Quantity": 1
     }
 ]

@@ -2,6 +2,8 @@ import re
 import requests
 import json
 import os
+from Addcard import remove_data, save_data
+from JsonRead import read_Json
 
 
 #Flow:
@@ -29,3 +31,33 @@ def card_validate2(cardname):
         return data['name']
     else:
         return False
+    
+def use_list_of_cards():
+    f = open("decklists\missy_irl.txt",'r')
+    lines=(f.read().splitlines())
+    print(lines)
+    file = 'Names.json'
+    for line in lines:
+        cardname= card_validate2(line)
+        print(cardname)
+        finder=False
+        for item2 in read_Json(file):
+            if item2['Name']==cardname and item2['Quantity'] > 0:
+                print("TESTE")
+                finder=True 
+        if not finder:
+            return False, cardname
+    return True, "nothing"
+        
+
+
+def use_decklist():
+    veri, card = use_list_of_cards()
+    if veri:
+        print("Cartas foram separadas")
+    else:
+        print(f'Há cartas não encontradas: {card}')
+
+
+
+    

@@ -2,7 +2,7 @@ import requests
 import json
 import os
 from Addcard import add_card, remove_card
-from DataManager import card_validate2
+from DataManager import use_decklist
 from JsonRead import read_Json
 
 
@@ -44,9 +44,7 @@ def main():
             case 3:
                 remove_card()
             case 4:
-                name = input("Digite o nome da carta: ")
-                receive=card_validate2(name)
-                print(f'A carta: {receive}')
+                use_decklist()
             case 0:
                 break
             case _:

@@ -47,8 +47,10 @@ def remove_data(name):
         json.dump(data_modificada, f, indent=4) 
     if exists:
         print(f'O Name "{name}" teve sua quantidade diminuida em 1.')
+        return True
     else:
         print(f'O Name "{name}" Não foi encontrado')
+        return False
         
 
 def card_search(data):
