@@ -18,6 +18,9 @@ from JsonRead import read_Json
 
 #Isso claramente está no local errado, mas deixa ai por agora senão vou ficar me confundindo entre mil arquivos.
 
+def deck_load():
+    return open("decklists\missy_irl.txt",'r')
+
 def remove_digit(name):
     return re.sub(r'^\d+\s', '', name)
 
@@ -32,8 +35,8 @@ def card_validate2(cardname):
     else:
         return False
     
-def use_list_of_cards():
-    f = open("decklists\missy_irl.txt",'r')
+def veri_list_of_cards(release):
+    f = deck_load()
     lines=(f.read().splitlines())
     print(lines)
     file = 'Names.json'
@@ -42,21 +45,64 @@ def use_list_of_cards():
         print(cardname)
         finder=False
         for item2 in read_Json(file):
-            if item2['Name']==cardname and item2['Quantity'] > 0:
+            if item2['Name']==cardname and (item2['Quantity'] > 0 or release):
                 print("TESTE")
                 finder=True 
         if not finder:
-            return False, cardname
-    return True, "nothing"
+            return False, cardname, file
+    return True, "nothing", file
         
+
+def use_cards(list):
+    file = 'Names.json'
+    try:
+        for line in list:
+            for item in read_Json(file):
+                if item['Name']==line and item['Quantity'] > 0:
+                    item['Quantity'] =-1
+                else:
+                    raise ValueError("Aconteceu erro ao retirar as cartas, por favor, use o backup")
+    except ValueError as e:
+        print(f"ERRO: {e}. Tente novamente.")
+
+
+def release_cards(list):
+    file = 'Names.json'
+    try:
+        for line in list:
+            for item in read_Json(file):
+                if item['Name']==line:
+                    item['Quantity'] =+1
+                else:
+                    raise ValueError("Aconteceu erro ao colocar as cartas, por favor, use o backup")
+    except ValueError as e:
+        print(f"ERRO: {e}. Tente novamente.")
+
+
+
+
+
+    
 
 
 def use_decklist():
-    veri, card = use_list_of_cards()
+    veri, card, list = veri_list_of_cards(False)
     if veri:
         print("Cartas foram separadas")
+        use_cards(list)
     else:
         print(f'Há cartas não encontradas: {card}')
+
+
+#NOTA: em release decklist, a carta já tem que ter um registro, essa NÃO pode ser uma maneira de registrar várias cartas
+def release_decklist():
+    veri, card, list = veri_list_of_cards(True)
+    if veri:
+        print("Cartas foram separadas")
+        release_cards(list)
+    else:
+        print(f'A seguinte carta não está registrada: {card}')
+
 
 
 

@@ -13,11 +13,7 @@ def print_data():
             print(f'{item['Quantity']} {item['Name']}')
 
 
-def decklist_create():
-    with open('Deck1.txt', 'r') as file:
-        text = file.readlines()
-    for i,item in  enumerate(text):
-        print(f'{item}')
+#Decklist create não é necessário.
 
 # Na API do scrifall deve ter como tutorar por SET + Collector numbers, mas o problema é que, assim a versão da carta seria salva
 # Da para criar um sistema que, pega e confirmar a carta a partir do set number, mas quando pesquisa só pega o nome 

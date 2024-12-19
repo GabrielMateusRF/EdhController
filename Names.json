@@ -28,5 +28,75 @@
         "Name": "Ambition's Cost",
         "InDeck": false,
         "Quantity": 1
+    },
+    {
+        "Name": "Arcane Denial",
+        "InDeck": false,
+        "Quantity": 1
+    },
+    {
+        "Name": "Arcane Lighthouse",
+        "InDeck": false,
+        "Quantity": 1
+    },
+    {
+        "Name": "Arcane Signet",
+        "InDeck": false,
+        "Quantity": 1
+    },
+    {
+        "Name": "Archmage Emeritus",
+        "InDeck": false,
+        "Quantity": 1
+    },
+    {
+        "Name": "Archway of Innovation",
+        "InDeck": false,
+        "Quantity": 1
+    },
+    {
+        "Name": "Bedevil",
+        "InDeck": false,
+        "Quantity": 1
+    },
+    {
+        "Name": "Big Score",
+        "InDeck": false,
+        "Quantity": 1
+    },
+    {
+        "Name": "Blasphemous Act",
+        "InDeck": false,
+        "Quantity": 1
+    },
+    {
+        "Name": "Blasphemous Edict",
+        "InDeck": false,
+        "Quantity": 1
+    },
+    {
+        "Name": "Island",
+        "InDeck": false,
+        "Quantity": 100
+    },
+    {
+        "Name": "Swamp",
+        "InDeck": false,
+        "Quantity": 100
+    },
+    {
+        "Name": "Mountain",
+        "InDeck": false,
+        "Quantity": 100
+    },
+    {
+        "Name": "Plains",
+        "InDeck": false,
+        "Quantity": 100
+    },
+    {
+        "Name": "Forest",
+        "InDeck": false,
+        "Quantity": 100
     }
 ]
